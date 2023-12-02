@@ -109,6 +109,10 @@ console.log('E4) L\'oggetto più costoso del carrello è:', maxShoppingCart())
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const latestShoppingCart = function () {
+    return shoppingCart[shoppingCart.length - 1]
+}
+console.log('E5) L\'ultimo oggetto del carrello è:', latestShoppingCart())
 
 /* EXTRA 6
  Crea una funzione chiamata "loopUntil" che riceve un numero intero come parametro con valore tra 0 e 9.
@@ -116,6 +120,28 @@ console.log('E4) L\'oggetto più costoso del carrello è:', maxShoppingCart())
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const loopUntil = function (n) {
+    if (n < 0 || n > 9) {
+        return console.log('E6a) Errore: inserire un numero intero tra 0 e 9.')
+    } else if (n >= 0 && n <= 9) {
+        let i = 0
+        let sum = 0
+        while (i < 3) {
+            let x = Math.floor(Math.random() * 10)
+            if (x > n || x === 9) {
+                sum += x
+                i++
+                console.log('E6a) Numero trovato: ' + x + '. Streak: ' + i)
+            } else if (x < n) {
+                console.log('E6a) Numero < di ' + n + ' trovato: ' + x + '. Reset.')
+                sum = 0
+                i = 0
+            }
+        }
+        return sum
+    }
+}
+console.log('E6b) Valore di loopUntil(7)', loopUntil(7))
 
 /* EXTRA 7
 Crea una funzione chiamata "average" che riceve un array come parametro e ne ritorna la media aritmetica. La funzione salta automaticamente i valori non numerici nell'array.
