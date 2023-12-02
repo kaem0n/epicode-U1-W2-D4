@@ -7,9 +7,20 @@ console.log('/==/ Esercizi aggiuntivi (facoltativi) per D4 /==/')
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-// const checkArray = function (n) {
-
-// }
+const checkArray = function (n) {
+    const x = giveMeRandom(n)
+    let sum = 0
+    for (let i=0; i<x.length; i++) {
+        if (x[i]  > 5) {
+            console.log('E1a) Ho trovato un numero > 5:', x[i])
+            sum += x[i]
+        } else if (x[i] <= 5) {
+            console.log('E1a) Ho trovato un valore <= 5:', x[i])
+        }
+    }
+    return sum
+}
+console.log('E1b) La somma dei valori > 5 è:', checkArray(5))
 
 /* EXTRA 2
  Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".
