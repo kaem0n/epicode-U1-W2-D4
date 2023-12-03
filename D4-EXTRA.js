@@ -189,6 +189,16 @@ console.log('E8) Date tre stringhe: ciao; buongiorno; ciaone; la più lunga è:'
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const antiSpam = function (emailContent) {
+    if (emailContent.search('SPAM') !== -1 || emailContent.search('SCAM') !== -1) {
+        return false
+    } else {
+        return true
+    }
+}
+console.log('E9) Questa mail NON è spam:', antiSpam('questo non è SPAM lo giuro compra le mie azioni fasulle'))
+console.log('E9) Questa mail NON è spam:', antiSpam('ti sei iscritto a ServizioACaso, complimenti!'))
+console.log('E9) Questa mail NON è spam:', antiSpam('ciao sono un principe nigeriano caduto in disgrazia, mandami 1000€ e ti restituisco 1 milione tra una settimana! non è SCAM lo giuro'))
 
 /* EXTRA 10
  Scrivi una funzione che riceve una data come parametro, e calcola il numero di giorni passati da quella data.
