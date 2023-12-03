@@ -77,7 +77,6 @@ const addToShoppingCart = function (n, id) {
         }
     }
 }
-// shoppingCart[0].quantity = 30
 console.log('E3a) Aggiungo altro pane (5):', addToShoppingCart(5, '001'))
 console.log('E3b) Aggiungo altre casse d\'acqua (10):', addToShoppingCart(10, '002'))
 console.log('E3c) Aggiungo altro dentifricio (7):', addToShoppingCart(7, '003'))
@@ -208,10 +207,11 @@ const matrixGenerator = function (x, y) {
     for (let i=0; i<x; i++) {
         const values = []
         for (let j=0; j<y; j++) {
-            values.push(Math.floor(Math.random()*101))
+            values.push("'"+i+"'"+j+"'")
         }
         matrix.push(values)
     }
     return matrix
 }
-console.log('E11) Matrice 3x2 con numeri random da 0 a 100:', matrixGenerator(3, 2))
+console.log('E11a) Matrice 3x2:', matrixGenerator(3, 2))
+console.log('E11b) Matrice 5x7:', matrixGenerator(5, 7))
