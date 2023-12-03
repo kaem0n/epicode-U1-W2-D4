@@ -183,6 +183,16 @@ console.log('E7) Dati i numeri: 2, 4, 6, ciaone, la loro media aritmetica è:', 
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const daysPassed = function (year, month, day) {
+    const minute = 1000 * 60
+    const hour = minute * 60
+    const days = hour * 24
+    const date = new Date("'"+year+"-"+month+"-"+day+"'")
+    const present = new Date()
+    const milliseconds = present.getTime() - date.getTime()
+    return Math.round(milliseconds / days)
+}
+console.log('E10) Giorni passati dalla data 2023-10-21:', daysPassed(2023, 10, 21))
 
 /* EXTRA 11
  Scrivi una funzione chiamata "matrixGenerator" che riceve come parametri due numeri interi, "x" e "y".
