@@ -193,3 +193,15 @@ console.log('E7) Dati i numeri: 2, 4, 6, ciaone, la loro media aritmetica è:', 
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const matrixGenerator = function (x, y) {
+    const matrix = []
+    for (let i=0; i<x; i++) {
+        const values = []
+        for (let j=0; j<y; j++) {
+            values.push(Math.floor(Math.random()*101))
+        }
+        matrix.push(values)
+    }
+    return matrix
+}
+console.log('E11) Matrice 3x2 con numeri random da 0 a 100:', matrixGenerator(3, 2))
