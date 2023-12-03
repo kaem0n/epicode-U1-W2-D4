@@ -169,6 +169,19 @@ console.log('E7) Dati i numeri: 2, 4, 6, ciaone, la loro media aritmetica è:', 
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const longest = function (string1, string2, string3) {
+    const strings = [string1, string2, string3]
+    const elementLength = []
+    for (let i=0; i<strings.length; i++) {
+        elementLength.push(strings[i].length)
+    }
+    for (let i=0; i<strings.length; i++) {
+        if (elementLength[i] === Math.max(...elementLength)) {
+            return strings[i]
+        }
+    }
+}
+console.log('E8) Date tre stringhe: ciao; buongiorno; ciaone; la più lunga è:', longest('ciao', 'buongiorno', 'ciaone'))
 
 /* EXTRA 9
  Crea una funzione per creare un filtro anti-spam per la tua casella email. La funzione riceve un parametro stringa chiamato "emailContent", e torna un valore booleano.
@@ -207,7 +220,7 @@ const matrixGenerator = function (x, y) {
     for (let i=0; i<x; i++) {
         const values = []
         for (let j=0; j<y; j++) {
-            values.push("'"+i+"'"+j+"'")
+            values.push(""+i+""+j+"")
         }
         matrix.push(values)
     }
