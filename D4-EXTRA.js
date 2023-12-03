@@ -11,7 +11,7 @@ const checkArray = function (n) {
     const x = giveMeRandom(n)
     let sum = 0
     for (let i=0; i<x.length; i++) {
-        if (x[i]  > 5) {
+        if (x[i] > 5) {
             console.log('E1a) Ho trovato un numero > 5:', x[i])
             sum += x[i]
         } else if (x[i] <= 5) {
@@ -131,7 +131,7 @@ const loopUntil = function (n) {
             if (x > n || x === 9) {
                 sum += x
                 i++
-                console.log('E6a) Numero trovato: ' + x + '. Streak: ' + i)
+                console.log('E6a) Numero maggiore di ' + n + ' trovato: ' + x + '. Streak: ' + i)
             } else if (x < n) {
                 console.log('E6a) Numero < di ' + n + ' trovato: ' + x + '. Reset.')
                 sum = 0
